@@ -8,28 +8,35 @@ public class plaindrome {
 	public static Stack <Character> palstack;
 	public static Queue <Character> palqueue;
 	
-	public plaindrome(){
-		palstack=new Stack<Character>(); 
-		palqueue=new LinkedList <Character>();
+	public plaindrome()
+	{
+	palstack=new Stack<Character>(); 
+	palqueue=new LinkedList <Character>();
 	}
-	public static boolean ispalindrome(String lineinput){
-	  for(int i=0;i<lineinput.length();i++ ){
-		  palstack.push(lineinput.charAt (i));
-		  palqueue.add(lineinput.charAt(i));
+	
+	public static boolean ispalindrome(String lineinput)
+	{
+	  for(int i=0;i<lineinput.length();i++ )
+	  {
+           palstack.push(lineinput.charAt (i));
+	   palqueue.add(lineinput.charAt(i));
 		  
 	  }
-		for(int i=0;i<lineinput.length();i++){
-			stack1+=palstack.pop();
-			queue1+=palqueue.remove();
-		}
-		if(stack1.equals(queue1)){
-			return true;
+	  for(int i=0;i<lineinput.length();i++)
+	  {
+	    stack1+=palstack.pop();
+	    queue1+=palqueue.remove();
+	  }
+	  if(stack1.equals(queue1))
+	  {
+	   return true;
 			
-		}
-		else{
-			return false;
+	  }
+	   else
+	  {
+             return false;
 				
-			}
-		}
-	}
+	  }
+      }
+}
 
